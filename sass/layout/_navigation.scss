@@ -1,0 +1,30 @@
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__logo-box {
+        display: flex;
+        align-items: center;
+
+        & > div:last-child {
+            margin-left: 15%;
+            min-width: 15rem;
+
+            @include respond(navbar) {
+                margin-left: 5vw;
+                min-width: 0;
+            }
+        }
+    }
+
+    &__menu-box {
+        flex: 0 0 12rem;
+        display: flex;
+        justify-content: space-between;
+        
+        @include respond(navbar) {
+            flex: 0 0 30vw;
+        }
+    }
+}

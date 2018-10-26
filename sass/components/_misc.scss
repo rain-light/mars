@@ -1,0 +1,115 @@
+/* LOGO */
+
+.logo {
+    padding: 0 .7rem;
+    text-transform: uppercase;
+    font-weight: 900;
+    position: relative;
+
+    &::after {
+        content: "";
+        display: block;
+        border: .2rem solid $color-primary;
+        border-radius: 50%;
+        padding: .2rem;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+
+    @include respond(navbar) {
+        font-size: 4.5vw;
+    }
+}
+
+/* PHONE NUMBER */
+
+.phone-number {
+    display: flex;
+    align-items: center;
+
+    &__icon {
+        width: 1.4rem;
+        height: 1.4rem;
+        fill: $color-gray;
+
+        @include respond(navbar) {
+            width: 3vw;
+            height: 3vw;
+        }
+    }
+
+    &__text {
+        margin-left: .3rem;
+        font-size: 1.2rem;
+        color: $color-gray;
+
+        @include respond(navbar) {
+            font-size: 3vw;
+        }
+    }
+}
+
+/* BUY NOW BUTTON */
+
+.buy-now,
+.buy-now:link,
+.buy-now:visited {
+    display: block;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #fff;
+    border-bottom: 1px solid #FE7178;
+
+    @include respond(phone) {
+        color: #000;
+        border-bottom: 1px solid $color-primary;
+    }
+
+    @include respond(navbar) {
+        font-size: 3.7vw;
+    }
+}
+
+/* HAMBURGER ICON */
+
+.hamburger {
+    display: block;
+    position: relative;
+    width: 2rem;
+    height: 1.3rem;
+
+    &__line {
+        display: block;
+        width: 100%;
+        height: .2rem;
+        background-color: #fff;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+
+        &::before,
+        &::after {
+            content: "";
+            display: block;
+            width: 100%;
+            height: 100%;
+            background-color: inherit;
+            position: absolute;
+        }
+
+        &::before {
+            bottom: .4rem;
+        }
+
+        &::after {
+            top: .4rem;
+        }
+
+        @include respond(phone) {
+            background-color: #000;
+        }
+    }
+}

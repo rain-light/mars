@@ -1,0 +1,19 @@
+.header {
+    height: 100vh;
+    background-image: linear-gradient(to right, $color-gray-light 0%, $color-gray-light 62%, $color-primary 62%);
+
+    @include respond(phone) {
+        background-image: linear-gradient(to bottom, $color-gray-light 0%, $color-gray-light 62%, $color-primary 62%);
+    }
+    
+    &__content {
+        max-width: 120rem;
+        width: 100%;
+        margin: 0 auto;
+        padding: 2% 0;
+
+        @include respond(tab-land) {
+            padding: 5%;
+        }
+    }
+}
