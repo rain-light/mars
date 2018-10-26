@@ -118,10 +118,6 @@
 
 .slider-dots {
 
-    @include respond(phone) {
-        display: flex;
-    }
-
     &__dot {
         margin: 1rem 0;
         width: .7rem;
@@ -132,10 +128,6 @@
 
         &--active {
             background-color: $color-primary;
-        }
-
-        @include respond(phone) {
-            margin: 0 1rem;
         }
     }
 }

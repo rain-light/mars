@@ -238,18 +238,6 @@ body {
 }
 
 /* SLIDER DOTS */
-.slider-dots {
-  /* SPECIAL MEDIA QUERIES */
-}
-
-@media only screen and (max-width: 37.5em) {
-  .slider-dots {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
-}
-
 .slider-dots__dot {
   margin: 1rem 0;
   width: .7rem;
@@ -257,17 +245,10 @@ body {
   border-radius: 50%;
   background-color: #E1E1E1;
   cursor: pointer;
-  /* SPECIAL MEDIA QUERIES */
 }
 
 .slider-dots__dot--active {
   background-color: #FF343D;
-}
-
-@media only screen and (max-width: 37.5em) {
-  .slider-dots__dot {
-    margin: 0 1rem;
-  }
 }
 
 .header {
@@ -304,7 +285,6 @@ body {
 }
 
 .header__main {
-  background-color: deepskyblue;
   position: relative;
   height: 100%;
   width: 66%;
@@ -322,10 +302,6 @@ body {
   .header__main {
     width: 100%;
     height: 60%;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
   }
 }
 
@@ -384,7 +360,6 @@ body {
 }
 
 .header__slider-box {
-  background-color: cyan;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -399,37 +374,17 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
   height: 100%;
-  /* SPECIAL MEDIA QUERIES */
+  width: 6%;
 }
 
 .header__slider-box span {
   -webkit-transform: rotate(-90deg) translateX(45%);
           transform: rotate(-90deg) translateX(45%);
-  /* SPECIAL MEDIA QUERIES */
-}
-
-@media only screen and (max-width: 37.5em) {
-  .header__slider-box span {
-    -webkit-transform: none;
-            transform: none;
-  }
-}
-
-@media only screen and (max-width: 37.5em) {
-  .header__slider-box {
-    -webkit-box-ordinal-group: 2;
-        -ms-flex-order: 1;
-            order: 1;
-    height: auto;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: reverse;
-        -ms-flex-direction: row-reverse;
-            flex-direction: row-reverse;
-  }
+  min-width: 10rem;
 }
 
 .header__text-box {
-  background-color: greenyellow;
+  margin-left: 4rem;
 }
 
 .header__text-box h6 {
