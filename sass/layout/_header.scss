@@ -1,5 +1,7 @@
 .header {
     height: 100vh;
+    position: relative;
+    overflow: hidden;
     background-image: linear-gradient(to right, $color-gray-light 0%, $color-gray-light 62%, $color-primary 62%);
 
     @include respond(phone) {
@@ -12,8 +14,37 @@
         margin: 0 auto;
         padding: 2% 0;
 
+        position: relative;
+        z-index: 100;
+
         @include respond(tab-land) {
             padding: 5%;
+        }
+    }
+
+    &__huge-heading {
+        transform-origin: top left;
+        transform: rotate(90deg) translateY(-315%);
+        position: absolute;
+        /* top: 36%;
+        right: -20%; */
+        top: -2rem;
+        right: 0;
+
+        @include respond(phone) {
+            transform: none;
+            top: auto;
+            bottom: 0;
+            right: auto;
+        }
+
+        @media only screen and (min-width: 37.5em) and (max-aspect-ratio: 3/4) {
+            right: -2%;
+        }
+
+        @media only screen and (max-width: 37.5em) and (min-aspect-ratio: 71/40) {
+            left: 11%;
+            bottom: -5%;
         }
     }
 }
