@@ -113,3 +113,29 @@
         }
     }
 }
+
+/* SLIDER DOTS */
+
+.slider-dots {
+
+    @include respond(phone) {
+        display: flex;
+    }
+
+    &__dot {
+        margin: 1rem 0;
+        width: .7rem;
+        height: .7rem;
+        border-radius: 50%;
+        background-color: #E1E1E1;
+        cursor: pointer;
+
+        &--active {
+            background-color: $color-primary;
+        }
+
+        @include respond(phone) {
+            margin: 0 1rem;
+        }
+    }
+}
