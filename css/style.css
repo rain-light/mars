@@ -94,7 +94,9 @@ body {
   text-transform: uppercase;
   font-weight: 900;
   position: relative;
-  /* SPECIAL MEDIA QUERIES */
+  /* @include respond(navbar) {
+        font-size: 4.5vw;
+    } */
 }
 
 .logo::after {
@@ -106,12 +108,6 @@ body {
   position: absolute;
   top: 0;
   right: 0;
-}
-
-@media only screen and (max-width: 19.125em) {
-  .logo {
-    font-size: 4.5vw;
-  }
 }
 
 /* PHONE NUMBER */
@@ -128,27 +124,19 @@ body {
   width: 1.4rem;
   height: 1.4rem;
   fill: #98A6AA;
-  /* SPECIAL MEDIA QUERIES */
-}
-
-@media only screen and (max-width: 19.125em) {
-  .phone-number__icon {
-    width: 3vw;
-    height: 3vw;
-  }
+  /* @include respond(navbar) {
+            width: 3vw;
+            height: 3vw;
+        } */
 }
 
 .phone-number__text {
   margin-left: .3rem;
   font-size: 1.2rem;
   color: #98A6AA;
-  /* SPECIAL MEDIA QUERIES */
-}
-
-@media only screen and (max-width: 19.125em) {
-  .phone-number__text {
-    font-size: 3vw;
-  }
+  /* @include respond(navbar) {
+            font-size: 3vw;
+        } */
 }
 
 /* BUY NOW BUTTON */
@@ -165,23 +153,17 @@ body {
   color: #fff;
   border-bottom: 1px solid #FE7178;
   /* SPECIAL MEDIA QUERIES */
-  /* SPECIAL MEDIA QUERIES */
+  /* @include respond(navbar) {
+        font-size: 3.7vw;
+    } */
 }
 
-@media only screen and (max-width: 37.5em) {
+@media only screen and (max-aspect-ratio: 71 / 70) {
   .buy-now,
   .buy-now:link,
   .buy-now:visited {
     color: #000;
     border-bottom: 1px solid #FF343D;
-  }
-}
-
-@media only screen and (max-width: 19.125em) {
-  .buy-now,
-  .buy-now:link,
-  .buy-now:visited {
-    font-size: 3.7vw;
   }
 }
 
@@ -222,7 +204,7 @@ body {
   top: .4rem;
 }
 
-@media only screen and (max-width: 37.5em) {
+@media only screen and (max-aspect-ratio: 71 / 70) {
   .hamburger__line {
     background-color: #000;
   }
@@ -289,9 +271,9 @@ body {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
   }
 }
 
