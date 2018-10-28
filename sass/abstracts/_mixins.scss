@@ -35,4 +35,8 @@ ORDER: Base + typography > general layout + grid > page layout > components
     @if $breakpoint == navbar {
         @media only screen and (max-width: 19.125em) { @content }; //306
     }
+
+    @if $breakpoint == portrait {
+        @media only screen and (max-aspect-ratio: 71 / 70) { @content };
+    }
 }

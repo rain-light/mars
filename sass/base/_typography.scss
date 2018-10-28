@@ -6,16 +6,8 @@
     color: $color-primary-light;
     text-shadow: 0rem 0rem 5rem rgba(0, 0, 0, .2);
 
-    @include respond(phone) {
+    @include respond(portrait) {
         font-size: 32vw;
-    }
-
-    @media only screen and (min-width: 37.5em) and (max-aspect-ratio: 3/4) {
-        font-size: 34vh;
-    }
-
-    @media only screen and (max-width: 37.5em) and (min-aspect-ratio: 71/40) {
-        font-size: 25vw;
     }
 }
 

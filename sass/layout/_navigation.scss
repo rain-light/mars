@@ -1,4 +1,12 @@
 .navigation {
+    max-width: 120rem;
+    width: 100%;
+    margin: 0 auto;
+
+    @include respond(tab-land) {
+        width: 95%;
+    }
+
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -8,24 +16,32 @@
         align-items: center;
 
         & > div:last-child {
-            margin-left: 15%;
-            min-width: 15rem;
+            margin-left: 4rem;
+            
+            @include respond(phone) {
+                margin-left: 2rem;
+            }
 
             @include respond(navbar) {
-                margin-left: 5vw;
-                min-width: 0;
+                margin-left: 2vw;
             }
         }
     }
 
     &__menu-box {
-        flex: 0 0 12rem;
         display: flex;
-        justify-content: space-between;
         align-items: center;
-        
-        @include respond(navbar) {
-            flex: 0 0 30vw;
+
+        & > a:first-child {
+            margin-right: 4rem;
+
+            @include respond(phone) {
+                margin-right: 2rem;
+            }
+
+            @include respond(navbar) {
+                margin-right: 2vw;
+            }
         }
     }
 }

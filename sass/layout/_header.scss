@@ -1,123 +1,48 @@
 .header {
-    min-height: 37rem;
-    height: 100vh;
-    max-height: 100rem;
     position: relative;
-    overflow: hidden;
-    background-image: linear-gradient(to right, $color-gray-light 0%, $color-gray-light 62%, $color-primary 62%);
+    height: 100vh;
+    display: flex;
 
-    @include respond(phone) {
-        background-image: linear-gradient(to bottom, $color-gray-light 0%, $color-gray-light 62%, $color-primary 62%);
-    }
-    
-    &__content {
-        max-width: 120rem;
-        width: 100%;
-        height: 100%;
-        margin: 0 auto;
-        padding: 2% 0;
-
-        position: relative;
-        z-index: 100;
-
-        @include respond(tab-land) {
-            padding: 5%;
-        }
-    }
-
-    &__main {
-        position: relative;
-        height: 100%;
-        width: 66%;
-        display: flex;
-        align-items: center;
-        right: 2%;
-
-        @include respond(phone) {
-            width: 100%;
-            height: 50%;
-            margin-top: 10%;
-        }
-    }
-
-    &__huge-heading {
-        transform-origin: top left;
-        transform: rotate(90deg) translateY(-315%);
-        position: absolute;
-        /* top: 36%;
-        right: -20%; */
-        top: -2rem;
-        right: 0;
-
-        @include respond(phone) {
-            transform: none;
-            top: auto;
-            bottom: 0;
-            right: auto;
-        }
-
-        @media only screen and (min-width: 37.5em) and (max-aspect-ratio: 3/4) {
-            right: -2%;
-        }
-
-        @media only screen and (max-width: 37.5em) and (min-aspect-ratio: 71/40) {
-            left: 11%;
-            bottom: -5%;
-        }
-    }
-
-    &__image-box {
-        position: absolute;
-        z-index: 101;
-        background-color: #fff;
-        width: 35vmax;
-        height: 35vmax;
-        max-width: 70rem;
-        max-height: 70rem;
-        border-radius: 50%;
-        right: 20.7%;
-        top: 24%;
-
-        @include respond(phone) {
-            bottom: 0;
-        }
-    }
-
-    &__image {
-        width: 150%;
-        margin-left: -24%;
-    }
-
-    &__slider-box {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+    @include respond(portrait) {
         flex-direction: column;
-        height: 100%;
-        width: 6%;
+    }
 
-        span {
-            transform: rotate(-90deg) translateX(45%);
-            min-width: 10rem;
-        }
+    &__navbar {
+        position: absolute;
+        width: 100%;
+        margin-top: 4rem;
+        z-index: 100;
+    }
 
-        @include respond(phone) {
+    &__left {
+        background-color: $color-gray-light;
+        flex: 0 0 60%;
+    }
 
-            .empty {
-                display: none;
-            }
+    &__right {
+        background-color: $color-primary;
+        flex: 0 0 40%;
+        position: relative;
+        overflow: hidden;
+        
+        @include respond(portrait) {
+            display: flex;
+            align-items: center;
         }
     }
 
-    &__text-box {
-        margin-left: 4rem;
+    &__heading-huge {
+        width: 100vh;
+        overflow: hidden;
+        transform-origin: top left;
+        transform: rotate(90deg);
+        position: absolute;
+        right: -100vh;
 
-        h6 {
-            margin-top: 1rem;
-        }
-
-        @include respond(phone) {
-            align-self: flex-start;
+        @include respond(portrait) {
+            transform: none;
+            position: static;
+            width: 100vw;
         }
     }
 }
