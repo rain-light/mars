@@ -1,0 +1,17 @@
+.btn,
+.btn:link,
+.btn:visited {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 700;
+    border-radius: 30px;
+    padding: 1rem 2rem;
+}
+
+.btn {
+
+    &--white {
+        background-color: #fff;
+        color: #000;
+    }
+}

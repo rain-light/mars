@@ -1,0 +1,175 @@
+.promo {
+    display: grid;
+    grid-template-columns: 3fr 7fr;
+    grid-template-rows: 29vw;
+    overflow: hidden;
+
+    @include respond(phone) {
+        grid-template-columns: 1fr;
+        grid-template-rows: 100vw 145vw;
+    }
+
+    &__left {
+        background-image: url(/img/tap-to-fly.png);
+        background-size: cover;
+        position: relative;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        overflow: hidden;
+    }
+
+    &__heading {
+        font-size: 3.5vw;
+
+        &--light {
+            color: #fff;
+        }
+
+        @include respond(phone) {
+            font-size: 12vw;
+        }
+    }
+
+    &__subheading {
+        color: $color-gray;
+        font-size: 1vw;
+
+        @include respond(phone) {
+            font-size: 3.5vw;
+        }
+    }
+
+    &__tap-to-fly {
+        margin-left: 25%;
+        position: relative;
+        z-index: 3;
+    }
+
+    &__left-circle {
+        position: absolute;
+        left: 100%;
+        transform: translateX(-50%);
+        border-radius: 50%;
+
+        &--1 {
+            background-color: #F3F5F8;
+            width: 25vw;
+            height: 25vw;
+
+            @include respond(phone) {
+                width: 75vw;
+                height: 75vw;
+            }
+        }
+
+        &--2 {
+            background-color: #EDF1F5;
+            width: 20vw;
+            height: 20vw;
+            z-index: 1;
+
+            @include respond(phone) {
+                width: 60vw;
+                height: 60vw;
+            }
+        }
+
+        &--3 {
+            background-color: #E8ECF1;
+            width: 15vw;
+            height: 15vw;
+            z-index: 2;
+
+            @include respond(phone) {
+                width: 45vw;
+                height: 45vw;
+            }
+        }
+    }
+
+    &__right {
+        background-image: url(/img/higher-than-before.png);
+        background-size: cover;
+
+        display: flex;
+
+        @include respond(phone) {
+            background-position: 27%;
+            flex-direction: column;
+        }
+
+        overflow: hidden;
+    }
+
+    &__fly-higher {
+        background-color: rgba(0, 0, 0, .7);
+        flex: 0 0 42.5%;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        @include respond(phone) {
+            flex: 0 0 60%;
+        }
+    }
+
+    &__fly-higher-text-box {
+        width: 90%;
+    }
+
+    &__right-bigger {
+        flex: 1;
+
+        @include respond(phone) {
+            display: flex;
+            align-items: center;
+        }
+    }
+
+    &__button {
+        width: 29vw;
+        transform-origin: top left;
+        transform: rotate(-90deg) translate(-100%, 25.8vw);
+
+        @include respond(phone) {
+            transform: none;
+            width: 100%;
+        }
+
+        display: flex;
+        align-items: center;
+    }
+
+    &__button-white-line {
+        width: 25%;
+        height: 1px;
+        background-color: #fff;
+
+        @include respond(phone) {
+            width: 60%;
+        }
+    }
+
+    &__btn,
+    &__btn:link,
+    &__btn:visited {
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: 1vw;
+        background-color: #fff;
+        color: #000;
+        padding: .8vw 1.5vw;
+        border-radius: 30px;
+        margin-left: 1rem;
+
+        @include respond(phone) {
+            margin-left: 3rem;
+            font-size: 3vw;
+            padding: 2vw 4.5vw;
+        }
+    }
+}
