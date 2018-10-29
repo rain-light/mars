@@ -451,7 +451,6 @@ body {
 
 .header__heading-huge {
   width: 100vh;
-  overflow: hidden;
   -webkit-transform-origin: top left;
           transform-origin: top left;
   -webkit-transform: rotate(90deg);
