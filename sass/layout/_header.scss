@@ -12,11 +12,94 @@
         width: 100%;
         margin-top: 4rem;
         z-index: 100;
+
+        @include respond(portrait) {
+            margin-top: 4vh;
+        }
     }
 
     &__left {
         background-color: $color-gray-light;
         flex: 0 0 60%;
+
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+    }
+
+    &__left-flex {
+        height: 90%;
+        display: flex;
+
+        flex: 0 0 42rem;
+        margin-left: calc((0.37142857142857 * 100vw) - 705.34285714286px);
+
+        @include respond(tab-land) {
+            margin-left: -27%;
+        }
+
+        @include respond(tab-port) {
+            flex: 0 0 60%;
+            margin-left: -25%;
+        }
+
+        @include respond(big-desktop) {
+            margin-left: -12rem;
+        }
+
+        @include respond(portrait) {
+            flex: 0 0 80%;
+            height: 45%;
+            align-self: center;
+            margin-left: 0;
+            margin-bottom: 12vh;
+            flex-direction: column-reverse;
+            justify-content: space-between;
+        }
+    }
+
+    &__slider-box {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        max-width: 2rem;
+
+        @include respond(portrait) {
+            flex-direction: row;
+            align-items: center;
+            max-width: none;
+            
+            .empty {
+                display: none;
+            }
+        }
+    }
+    
+    &__scroll-box {
+        min-width: 10rem;
+        transform-origin: top left;
+        transform: rotate(-90deg);
+        position: relative;
+        right: .7rem;
+
+        @include respond(portrait) {
+            min-width: none;
+            transform: none;
+            position: static;
+        }
+    }
+
+    &__text-box {
+        align-self: center;
+        padding-left: 4rem;
+
+        h6 {
+            margin-top: 1.5rem;
+        }
+
+        @include respond(portrait) {
+            padding-left: 0;
+        }
     }
 
     &__right {
