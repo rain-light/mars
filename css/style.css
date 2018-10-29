@@ -87,6 +87,10 @@ body {
   }
 }
 
+.heading-3 {
+  font-size: 4rem;
+}
+
 .heading-6 {
   font-weight: 400;
   color: #92A1A5;
@@ -839,5 +843,47 @@ body {
     font-size: 3vw;
     padding: 2vw 4.5vw;
   }
+}
+
+.features {
+  padding: 10rem 2rem;
+}
+
+.features__content {
+  max-width: 120rem;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.features__grid {
+  margin-top: 5rem;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(18rem, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+  grid-column-gap: 3rem;
+  grid-row-gap: 6rem;
+}
+
+.features__feature {
+  min-height: 15rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.features__text {
+  font-size: 2.2rem;
 }
 /*# sourceMappingURL=style.css.map */
