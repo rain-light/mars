@@ -1,0 +1,37 @@
+.promo-cta {
+    display: flex;
+    height: 30vw;
+    overflow: hidden;
+
+    @include respond(phone) {
+        flex-direction: column;
+        height: 145vw;
+    }
+
+    &__image {
+        flex: 0 0 45%;
+        background-image: url(/img/promo-cta.png);
+        background-size: cover;
+    }
+
+    &__cta {
+        flex: 1;
+        background-color: #232323;
+        position: relative;
+    }
+
+    &__icon {
+        position: absolute;
+        top: 1.5vw;
+        right: -10.5vw;
+        fill: #2D2D2D;
+        width: 27vw;
+        height: 27vw;
+
+        @include respond(phone) {
+            width: 75vw;
+            height: 75vw;
+            right: -30vw;
+        }
+    }
+}
