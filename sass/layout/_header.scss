@@ -115,6 +115,7 @@
 
     &__heading-huge {
         width: 100vh;
+        overflow: hidden;
         transform-origin: top left;
         transform: rotate(90deg);
         position: absolute;

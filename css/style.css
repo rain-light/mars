@@ -67,7 +67,7 @@ body {
       -ms-user-select: none;
           user-select: none;
   color: #FF343D;
-  text-shadow: 0rem 0rem 5rem rgba(0, 0, 0, 0.2);
+  text-shadow: 0rem 0rem 3rem rgba(0, 0, 0, 0.2);
   /* SPECIAL MEDIA QUERIES */
 }
 
@@ -451,6 +451,7 @@ body {
 
 .header__heading-huge {
   width: 100vh;
+  overflow: hidden;
   -webkit-transform-origin: top left;
           transform-origin: top left;
   -webkit-transform: rotate(90deg);
