@@ -1013,7 +1013,7 @@ body {
   .promo-cta__button, .promo-cta__button:link, .promo-cta__button:visited {
     display: block;
     text-align: center;
-    width: 18.9rem;
+    width: 20rem;
     margin: 0 auto;
     font-size: 2rem;
     padding: 1.6rem 3.1rem;
@@ -1134,6 +1134,54 @@ body {
   color: #318F76;
   background-color: #fff;
   border-radius: 30px;
+  font-weight: 600;
   padding: 1.2rem 2.5rem;
+}
+
+.footer {
+  height: 20vmax;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.footer__bg {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  text-transform: uppercase;
+  font-size: 10vw;
+  font-weight: 700;
+  color: #fff;
+  text-shadow: 0 0 15vw rgba(0, 0, 0, 0.15);
+}
+
+.footer__content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+}
+
+.footer__content .logo {
+  margin: 0 auto;
+  margin-bottom: 1.5vw;
+}
+
+.footer__credits {
+  font-size: 1.4rem;
+  color: #92A1A5;
 }
 /*# sourceMappingURL=style.css.map */
