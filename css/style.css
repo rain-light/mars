@@ -1100,4 +1100,40 @@ body {
   background-color: #2D2D2D;
   color: #fff;
 }
+
+.journey {
+  height: 100vh;
+  background-image: url(/img/start-your-journey.png);
+  background-size: cover;
+  background-position: 53% top;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.journey__content {
+  margin-bottom: 20vh;
+  text-align: center;
+}
+
+.journey__text {
+  font-size: 5vw;
+  color: #fff;
+  margin-bottom: 5vh;
+}
+
+.journey__button, .journey__button:link, .journey__button:visited {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #318F76;
+  background-color: #fff;
+  border-radius: 30px;
+  padding: 1.2rem 2.5rem;
+}
 /*# sourceMappingURL=style.css.map */
