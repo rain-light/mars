@@ -57,6 +57,11 @@ body {
   font-size: 1.6rem;
 }
 
+html,
+body {
+  overflow-x: hidden;
+}
+
 .heading-hero {
   text-transform: uppercase;
   font-size: 36vh;
